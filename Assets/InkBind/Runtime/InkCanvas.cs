@@ -11,6 +11,9 @@ namespace Assets.InkBind.Runtime
         [Tooltip("Chat canvas to show/hide on request.")]
         public GameObject canvas;
 
+        [Tooltip("Component in the chat canvas holding the speaker name.")]
+        public TMP_Text speaker;
+
         [Tooltip("Component in the chat canvas holding the dialog text.")]
         public TMP_Text dialog;
 
@@ -49,6 +52,7 @@ namespace Assets.InkBind.Runtime
             transform.parent = target;
             transform.localPosition = Vector3.zero;
             transform.localRotation = Quaternion.identity;
+            UpdateCanvas();
             canvas.SetActive(true);
         }
 

@@ -10,14 +10,8 @@ namespace Assets.InkBind.Runtime
     /// </summary>
     public enum InkTagState
     {
-        [Tooltip("When the tag fires with any value.")]
-        Any,
-
         [Tooltip("When the tag fires with a value equals to 'pattern'.")]
         Equals,
-
-        [Tooltip("When the tag fires with any value other than 'pattern'.")]
-        NotEquals,
 
         [Tooltip("When the tag fires with a value starting with 'pattern'.")]
         StartsWith,
@@ -47,17 +41,8 @@ namespace Assets.InkBind.Runtime
         {
             switch (state)
             {
-                case InkTagState.Any:
-                    action.Invoke(inkTag);
-                    break;
-
                 case InkTagState.Equals:
                     if (inkTag == pattern)
-                        action.Invoke(inkTag);
-                    break;
-
-                case InkTagState.NotEquals:
-                    if (inkTag != pattern)
                         action.Invoke(inkTag);
                     break;
 

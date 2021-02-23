@@ -4,14 +4,14 @@ VAR metJoe = false
 VAR metKris = false
 VAR bobSuggestedKris = false
 
-s-> Explore
+-> Explore
 
 === Explore ===
 #explore
-+ [ChatBob] -> ChatBob
-+ [ChatJen] -> ChatJen
-+ [ChatJoe] -> ChatJoe
-+ [ChatKris] -> ChatKris
++ [chat:bob] -> ChatBob
++ [chat:jen] -> ChatJen
++ [chat:joe] -> ChatJoe
++ [chat:kris] -> ChatKris
 
 === ChatBob ===
 #chat:bob
